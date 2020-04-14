@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Bootstrap 4 Course Class 9 - Media Queries and Breakpoints</title>
+                        <!--Consultas de Medios y Puntos de Interrupción. Los Breakpoints son la Forma en la que Bootstarp 4 nos permite cambiar los Estilos de CSS dependiendo del Tamaño de la Pantalla.-->
+
+    <style media="screen">
+    /*El Atributo de Medios(media) Especifica para qué Medios/Dispositivo está Optimizado el Documento o Etiqueta vinculado.
+    Este atributo se utiliza para Especificar que la URL de destino está Diseñada para Dispositivos Especiales (como iPhone), Distintos Tamaños de Pantallas (De PC, Teléfono Movil. etc.) o para untilizar 
+    esos Estilos al Imprimir. Este atributo puede aceptar varios valores.
+    +-En el Siguiente Ejemplo , veremos como se realizará una Consulta de Medios (Media Query) en Cuál se Especificará que si La Pantalla(Screen) Tiene un Mínimo(min) de Ancho(Width) de 576 Píxeles(576px),
+    que es lo mínimo que Acepta Bootstrap 4, se van a usar los Estilos CSS dentro de los Corchetes({}) y el Color de Fondo(background-color) va a ser Rojo(red), pero si si La Pantalla(Screen) Tiene un Mínimo(min)
+    de Ancho(Width) de 768 Píxeles(768px) Entonces el Color de Fondo(background-color) va a ser Amarillo(yellow), y así sucesivamente.
+
+    +-En este Ejemplo solo usamos Colores de Fondo para Simplificar pero en Realidad se van a Aplicar TODOS LOS ESTILOS CSS que nosotros escribamos dentro de los Corchetes({}).*/
+    @media (min-width: 576px) /*Tamaño de Pantallas más Pequeños*/{
+        body {
+            background-color: red;
+        }
+    }
+
+    @media (min-width: 768px) /*Tamaño de Pantalla Mediana*/{
+        body {
+            background-color:yellow;
+        }
+    }
+
+    @media (min-width: 992px) /*Tamaño de Pantalla Grande*/{
+        body {
+            background-color: orangered;
+        }
+    }
+
+    @media (min-width: 1200px) /*Tamaño de Pantalla Extra Grande*/{
+        body {
+            background-color: green;
+        }
+    }
+    /*También se pueden hacer Consultas de Medios(Media Query) a partir del Ancho(Width) MÁXIMO(max) de una Pantalla en vez del Mínimo(min) escribiendo "@media (max-width: ***px) {...}".*/
+    </style>
+</head>
+<body>
+<h1 class="h1 text-center">Bootstrap 4 - Breakpoints. If the the Width of this Screen is lower than 576px, the Background will be the standard White; If it is higher than 576px and lower than 768px,
+the Background Color will be Red; If it is higher than 768px and lower than 992px, the Background Color will be Yellow; If it is higher than 992px and lower than 1200px, the Background Color will be Orangered and
+If it is higher than 1200px the Background Color will be Green.</h1>
+
+
+
+
+
+
+
+
+<!-- Si utilizamos componentes de Bootstrap que requieran Javascript agregar estos tres archivos -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
